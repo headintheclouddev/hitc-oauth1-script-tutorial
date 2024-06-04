@@ -8,7 +8,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/headintheclouddev/hitc-oauth1-script-tutorial"
   },
   "readme": "HITC OAuth 1.0 Script Tutorial"
 }
