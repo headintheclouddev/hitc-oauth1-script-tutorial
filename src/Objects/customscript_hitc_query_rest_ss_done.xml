@@ -1,0 +1,23 @@
+<scheduledscript scriptid="customscript_hitc_query_rest_ss_done">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>HITC - Query REST - Scheduled (Done)</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/hitc_query_rest_ss_done.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy1">
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>NOTSCHEDULED</status>
+      <title>HITC - Query REST - Scheduled (Done)</title>
+      <recurrence>
+        <single>
+          <repeat></repeat>
+          <startdate>2024-06-03</startdate>
+          <starttime>23:00:00Z</starttime>
+        </single>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</scheduledscript>

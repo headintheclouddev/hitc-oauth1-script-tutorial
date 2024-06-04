@@ -1,0 +1,14 @@
+{
+  "name": "hitc-oauth1-script-tutorial",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@hitc/netsuite-types": "^2024.1.3",
+    "typescript": "^5.4.5"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "readme": "HITC OAuth 1.0 Script Tutorial"
+}
