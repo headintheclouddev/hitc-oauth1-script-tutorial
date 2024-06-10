@@ -18,8 +18,8 @@ export function execute() {
 }
 
 function queryRESTlet(restletURL: string): void {
-  const integrationConsumerKey = '52b826f27ff4a77d9a528feae33d4ccbca12d3d0e15f63232d0c5aad9245ddc2';
-  const tokenId = 'ecf62ebdb8eb443c9987e39a390ec6c1cd3e495a5a75769acf1c72d11add39d1';
+  const integrationConsumerKey = 'xxx';
+  const tokenId = 'xxx';
   // In the OAuth signature, we have to separate the base URL from the parameters listed after it:
   const baseURLAndParameters = restletURL.split('?'); // Split: https://tstdrv1264278.restlets.api.netsuite.com/app/site/hosting/restlet.nl ? script=1167&deploy=1
   const scriptAndDeployment = baseURLAndParameters[1].split('&'); // Split: script=1167 & deploy=1
@@ -48,7 +48,7 @@ function queryRESTlet(restletURL: string): void {
   const realm = restletURL.split('.')[0].replace('https://', '').toUpperCase().replace('-', '_');
   // Concatenate the pieces to create the final Authorization Header:
   let Authorization = `OAuth realm="${realm}",oauth_consumer_key="${integrationConsumerKey}",oauth_token="${tokenId}",`;
-  Authorization += `oauth_signature_method="HMAC-SHA256",oauth_timestamp="${timestamp}",oauth_nonce="${nonce}",oauth_signature="${signature}"`
+  Authorization += `oauth_signature_method="HMAC-SHA256",oauth_timestamp="${timestamp}",oauth_nonce="${nonce}",oauth_signature="${signature}"`;
   const response = https.get({
     url: restletURL + '&salesOrderId=' + salesOrderId,
     headers: { Authorization }
@@ -57,8 +57,8 @@ function queryRESTlet(restletURL: string): void {
 }
 
 function queryRESTWebService(account: string, query: string): void { // If you're using a sandbox, account should be like: 123456-sb1
-  const integrationConsumerKey = '52b826f27ff4a77d9a528feae33d4ccbca12d3d0e15f63232d0c5aad9245ddc2';
-  const tokenId = 'ecf62ebdb8eb443c9987e39a390ec6c1cd3e495a5a75769acf1c72d11add39d1';
+  const integrationConsumerKey = 'xxx';
+  const tokenId = 'xxx';
   const nonce = makeNonce(10);
   const timestamp = Math.round(Date.now() / 1000); // Round to the nearest second
   const restWebServiceURL = `https://${account.toLowerCase()}.suitetalk.api.netsuite.com/services/rest/query/v1/suiteql`;

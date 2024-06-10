@@ -16,8 +16,8 @@ define(["require", "exports", "N/crypto", "N/encode", "N/https", "N/log"], funct
     }
     exports.execute = execute;
     function queryRESTlet(restletURL) {
-        const integrationConsumerKey = '52b826f27ff4a77d9a528feae33d4ccbca12d3d0e15f63232d0c5aad9245ddc2';
-        const tokenId = 'ecf62ebdb8eb443c9987e39a390ec6c1cd3e495a5a75769acf1c72d11add39d1';
+        const integrationConsumerKey = 'xxx';
+        const tokenId = 'xxx';
         // In the OAuth signature, we have to separate the base URL from the parameters listed after it:
         const baseURLAndParameters = restletURL.split('?'); // Split: https://tstdrv1264278.restlets.api.netsuite.com/app/site/hosting/restlet.nl ? script=1167&deploy=1
         const scriptAndDeployment = baseURLAndParameters[1].split('&'); // Split: script=1167 & deploy=1
@@ -54,8 +54,8 @@ define(["require", "exports", "N/crypto", "N/encode", "N/https", "N/log"], funct
         log.debug('queryRESTlet', `Response ${response.code}: ${response.body}`);
     }
     function queryRESTWebService(account, query) {
-        const integrationConsumerKey = '52b826f27ff4a77d9a528feae33d4ccbca12d3d0e15f63232d0c5aad9245ddc2';
-        const tokenId = 'ecf62ebdb8eb443c9987e39a390ec6c1cd3e495a5a75769acf1c72d11add39d1';
+        const integrationConsumerKey = 'xxx';
+        const tokenId = 'xxx';
         const nonce = makeNonce(10);
         const timestamp = Math.round(Date.now() / 1000); // Round to the nearest second
         const restWebServiceURL = `https://${account.toLowerCase()}.suitetalk.api.netsuite.com/services/rest/query/v1/suiteql`;
